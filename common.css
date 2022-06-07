@@ -156,12 +156,29 @@
 }
 
 @keyframes spin-back {
-    60% {
+    50% {
         transform: rotate(360deg);
     }
 }
 
 /* N.12 */
+
+.linea:hover {
+    animation: run-back 1s linear 2 alternate-reverse;
+    animation: run-forward 1s linear 2 alternate-reverse;
+}
+
+@keyframes run-back{
+    0% {
+        transform: translate(100%);
+    }
+}
+
+@keyframes run-forward {
+    0% {
+        transform: translate(-100%);
+    }
+}
 
 
 
