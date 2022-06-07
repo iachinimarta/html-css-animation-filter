@@ -122,6 +122,43 @@
 .ex-8-img:hover {
     border-radius: 10px;
     filter: grayscale(70%) sepia(30%);
-
 }
-    
+
+/* N.9 */
+
+.ex-9-img {
+    transition: all 2s;
+}
+
+.ex-9-img:hover {
+    margin: 0;
+    width: 600px;
+    filter: grayscale(40%) sepia(60%);
+    border-radius: 10px;
+}
+
+/* N.10 */
+
+.ex-10-icon {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+} 
+
+/* N.11 */
+
+.ex-11-icon:hover {
+    animation: spin 2s linear;
+}
+
+/* ???*/
+
+/* N.12 */
+
+
+
+
