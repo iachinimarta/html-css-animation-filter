@@ -152,10 +152,14 @@
 /* N.11 */
 
 .ex-11-icon:hover {
-    animation: spin 2s linear;
+    animation: spin-back 2s linear 1 alternate;
 }
 
-/* ???*/
+@keyframes spin-back {
+    60% {
+        transform: rotate(360deg);
+    }
+}
 
 /* N.12 */
 
