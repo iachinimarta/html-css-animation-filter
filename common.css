@@ -69,3 +69,32 @@
 .ex-3-square:hover {
     border-radius: 50%;
 }
+
+/* N.4 */
+
+.ex-4-square {
+    transition: all 4s;
+}
+
+.ex-4-square:hover {
+    background-color: #f5f5f5;
+    opacity: 100%;
+}
+
+/* N.5 */
+
+.ex-5-square {
+    transition: all 2s;
+}
+
+.ex-5-square:hover {
+    width: 100px;
+    height: 100px;
+}
+
+.ex-5-square:active {
+    width: 30px;
+    height: 30px;
+}
+
+/* N.6 */
