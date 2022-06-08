@@ -63,7 +63,7 @@
 /* N.3 */
 
 .ex-3-square {
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .ex-3-square:hover {
@@ -78,7 +78,7 @@
 
 .ex-4-square:hover {
     background-color: #f5f5f5;
-    opacity: 100%;
+    /* Rimosso opacity durante la correzione perchè non necessario */
 }
 
 /* N.5 */
@@ -88,13 +88,17 @@
 }
 
 .ex-5-square:hover {
-    width: 100px;
-    height: 100px;
+    /* width: 100px;
+    height: 100px; 
+
+    Meglio usare scale*/
+    transform: scale(2);
 }
 
 .ex-5-square:active {
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
+    transform: scale(0.5);
 }
 
 /* N.6 */
@@ -120,7 +124,7 @@
 }
 
 .ex-8-img:hover {
-    border-radius: 10px;
+    border-radius: 15px;
     filter: grayscale(70%) sepia(30%);
 }
 
@@ -131,8 +135,9 @@
 }
 
 .ex-9-img:hover {
-    margin: 0;
-    width: 600px;
+    /* margin: 0;
+    width: 600px; */
+    transform: scale(1.5);
     filter: grayscale(40%) sepia(60%);
     border-radius: 10px;
 }
@@ -152,18 +157,18 @@
 /* N.11 */
 
 .ex-11-icon:hover {
-    animation: spin-back 2s linear 1 alternate;
+    animation: spin-back 2s linear 1; /*Tolto alternate perché non necessario*/
 }
 
 @keyframes spin-back {
-    50% {
-        transform: rotate(360deg);
+    80% {
+        transform: rotate(300deg); /*Cambiato il valore di rotazione per far stoppare il giro prima*/
     }
 }
 
 /* N.12 */
 
-.linea:hover {
+/* .linea:hover {
     animation: run-back 1s linear 2 alternate-reverse;
     animation: run-forward 1s linear 2 alternate-reverse;
 }
@@ -178,7 +183,45 @@
     0% {
         transform: translate(-100%);
     }
+} 
+
+Ragionamento sbagliato*/
+
+.ex-12-button:hover .ex-12-top-white {
+    animation: translateRight 2s linear;
 }
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: translateLeft 2s linear;
+}
+
+@keyframes translateRight {
+    50% { 
+        left: calc(100% - 60px);
+    }
+
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes translateLeft {
+    50% { 
+        right: calc(100% - 60px);
+    }
+
+    100% {
+        right: 20%;
+    }
+}
+
+
+/* N.13 */
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: moveTop 2s linear;
+}
+ /* RIVEDERE CORREZIONE ESERCIZIO */
 
 
 
